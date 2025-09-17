@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Screen 1 -->
+    <div class="screen active" id="screen1">
+      <h1>READY???</h1> 
+      <video autoplay loop muted playsinline class="gift-video">
+        <source src="Media/Gift_Box.mp4_1757599012433.mp4" type="video/mp4" />
+      </video>
+      <button class="next-btn" onclick="goToScreen(2)">NEXT</button>
+    </div>
+
+    <!-- Screen 2 -->
+    <div class="screen" id="screen2">
+    <button class="back-btn" onclick="goToScreen(1)">
+    <img src="Media\Vector.svg" alt="backbtn"></button>
+
+  <!-- Text container at the top -->
+  <div class="texts">
+    <div class="typing" id="text1"></div>
+    <div class="typing" id="text2"></div>
+  </div>
+
+  <!-- Images fixed in the middle -->
+  <div class="images-wrapper">
+    <img src="Media/Group 1.png" alt="Song 1" onclick="playSong('Media/Juice WRLD feat. SUGA & BTS - Girl Of My Dreams.mp3')">
+    <img src="Media/Group 2.png" alt="Song 2" onclick="playSong('Media/09. Juice WRLD - Flaws and Sins.mp3')">
+  </div>
+
+   <!-- One hidden audio element for all songs -->
+ <audio id="music" loop></audio>
+
+  <button class="next-btn" onclick="goToScreen(3)">NEXT</button>
+</div>
+
+
+    <!-- Screen 3 -->
+    <div class="screen" id="screen3">
+       <button class="back-btn" onclick="goToScreen(2)">
+    <img src="Media/Vector.svg" alt="backbtn"></button>
+  <div class="birthday-bg"></div>
+    <div class="birthday-message">
+         <div class="typing" id="text3"></div> <!-- 👈 typing container -->
+      </p>
+      <button class="next-btn" onclick="goToScreen(4)">NEXT</button>
+    </div>
+  </div>
+
+
+
+    <!-- Screen 4 -->
+    <div class="screen" id="screen4">
+      <button class="back-btn" onclick="goToScreen(3)">
+      <img src="Media/Vector.svg" alt="back-btn"></button>
+      <div class="birthday-bg1"></div>
+      <div class="birthday-message1">
+           <div class="typing" id="text4"></div> <!-- 👈 typing container -->
+      <button class="next-btn" onclick="goToScreen(5)">NEXT</button>
+    </div>
+    </div>
+
+    <!-- Screen 5 -->
+    <div class="screen" id="screen5">
+      <button class="back-btn" onclick="goToScreen(4)">
+      <img src="Media/Vector.svg" alt="back-btn"></button>
+      <div class="birthday-bg2"></div>
+      <div class="birthday-message2">
+           <div class="typing" id="text5"></div> <!-- 👈 typing container -->
+      <button class="next-btn" onclick="goToScreen(6)">NEXT</button>
+    </div>
+    </div>
+
+    <!-- Screen 6 -->
+    <div class="screen" id="screen6">
+      <button class="back-btn" onclick="goToScreen(5)">
+      <img src="Media/Vector.svg" alt="back-btn">
+    </button>
+      <div class="birthday-bg3"></div>
+      <!-- Bubble container -->
+   <div id="bubbles"></div>
+      <button class="next-btn" onclick="goToScreen(7)">NEXT</button>
+    </div>
+
+ <!-- Screen 7 (Final) -->
+<div class="screen" id="screen7">
+  <button class="back-btn" onclick="goToScreen(6)">
+    <img src="Media/Vector.svg" alt="back-btn">
+  </button>
+  <audio id="cheer" src="Media09. Juice WRLD - Flaws and Sins.mp3"></audio>
+
+
+  <div class="cake-container">
+    <img src="Media/3d birthday cake with candles and sprinkles _ Premium AI-generated PSD 1.png" 
+         alt="Birthday Cake" class="cake-image">
+
+    <div id="candles">
+      <!-- Candle 1 -->
+      <div class="candle" style="left: 52%; top: 22%;">
+  <div class="flame lit"></div>   <!-- just ONE flame -->
+  <div class="smoke"></div>       <!-- smoke when blown -->
+</div>
+
+<div class="candle" style="left: 58%; top: 22%;">
+  <div class="flame lit"></div>
+  <div class="smoke"></div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- 🎉 Secret message (hidden at first) -->
+  <p id="secret-message" style="display:none; font-size:22px; text-align:center; margin-top:20px;">
+    I hope this likkle something made you smile..... Surprise Motherfucker hehehehe❤️
+  </p>
+</div>    
+   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
